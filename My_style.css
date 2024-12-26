@@ -1,0 +1,457 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: monospace;
+    font-size: 1.3rem;
+    margin: 0;
+    font-family: "Economica", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.navDesktop a:hover {
+    color: white;
+}
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+
+/* Header start */
+
+header .containerNav li {
+    font-size: 1rem;
+}
+
+
+/* Nav */
+
+.containerNav {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.076);
+    display: flex;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    justify-content: space-between;
+    background-color: rgb(22, 22, 22);
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    margin: auto;
+    height: 60px;
+}
+
+.logo img {
+    max-height: 100px;
+}
+
+.navDesktop {
+    /* Flex for horizontal align */
+    display: flex;
+    padding: 0 20px;
+}
+
+.navDesktop a {
+    font-size: 1rem;
+    padding: 0 20px;
+}
+
+
+
+/* Style for off screen mobile menu */
+.off-screen {
+    background-color: rgba(0, 0, 0, 0.857);
+    height: 100vh;
+    width: 80%;
+    max-width: 500px;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    transition: .5s ease-in-out;
+    z-index: 1;
+}
+
+.off-screen.active {
+    right: 0;
+}
+
+.off-screen ul {
+    top: 100px;
+    position: inherit;
+
+}
+
+.navMobile .off-screen li,
+a {
+    padding: 25px 0;
+    font-size: 2rem;
+    transition: 0.6s ease-in-out;
+    color: rgb(238, 0, 158);
+}
+
+.menuBurger {
+    color: rgb(238, 0, 158);
+    transition: 0.6s ease-in-out;
+}
+
+.menuBurger:hover {
+    color: rgb(255, 51, 187);
+    font-size: 1rem;
+}
+
+.off-screen a:hover {
+    color: white;
+}
+
+
+
+.menuBurger i {
+    z-index: 1000;
+    position: fixed;
+    right: 50px;
+    top: 40px;
+}
+
+
+/*  Intro Section  */
+#Intro {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 100%;
+    top: 45px;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.text {
+    width: 50%;
+    padding: 50px 20px 0 20px;
+    align-items: center;
+}
+
+.image {
+    width: 50%;
+    overflow: hidden;
+
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/*  About Me Section  */
+#About_Me {
+    background-color: rgb(32, 32, 32);
+    height: auto;
+    padding: 50px 0 40px 0;
+    color: white;
+    min-height: 500px;
+}
+
+#About_Me h2 {
+    text-align: center;
+    color: rgb(238, 0, 158);
+}
+
+#About_Me p {
+    padding: 25px 50px;
+    margin-bottom: 0;
+
+}
+
+/*  My resume Section  */
+
+#My_Resume {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    padding: 20px 0 100px;
+
+}
+
+#My_Resume h3 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* .clearfix {
+    clear: both;
+} */
+
+
+#My_Resume .card-body {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.card-title {
+    color: rgb(238, 0, 158);
+    height: 45px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.subtitle {
+    padding: 0;
+    margin: 0;
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.566);
+}
+
+#My_Resume .card-text {
+    text-align: center;
+    padding: 15px 15px;
+
+}
+
+
+#My_Resume .flex {
+    display: flex;
+    justify-content: center;
+}
+
+#My_Resume .card {
+    text-align: center;
+    width: 45%;
+}
+
+/* Contact section */
+
+#Contact {
+    background-color: rgb(28, 4, 107);
+    height: auto;
+    position: relative;
+    box-shadow: 0 2rem 4rem black;
+    padding: 40px 0;
+    color: white;
+}
+
+#Contact h2 {
+    text-align: center;
+    color: rgb(238, 0, 158);
+}
+
+form {
+    justify-content: center;
+    display: grid;
+    width: 100%;
+}
+
+label {
+    padding-bottom: 10px;
+}
+
+textarea {
+    height: 130px;
+}
+
+::placeholder {
+    color: rgba(67, 67, 67, 0.313);
+}
+
+form textarea,
+input,
+button {
+    border-radius: 5px;
+    border: none;
+    width: 400px;
+}
+
+form #submit,
+#resetButton {
+    justify-self: center;
+    width: 50%;
+}
+
+form button {
+    color: rgb(238, 0, 158);
+    background-color: rgb(255, 255, 255);
+    transition: 0.6s ease-in-out;
+}
+
+form #resetButton:hover {
+    color: white;
+    background-color: rgb(79, 3, 210);
+    font-weight: bolder;
+}
+
+form #submit:hover {
+    background-color: rgb(238, 0, 158);
+    color: white;
+    font-weight: bolder;
+    pointer-events: fill;
+}
+
+#resetButton {
+    margin-top: 15px;
+    color: rgb(65, 0, 177);
+    transition: 0.6s ease-in-out;
+}
+
+.error {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+
+/*  Footer section  */
+footer {
+    background-color: rgb(22, 22, 22);
+    height: auto;
+    width: 100%;
+    font-size: 0.8rem;
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+footer img {
+    width: 20%;
+}
+
+footer .info {
+    text-align: center;
+    color: white;
+    padding: 50px 50px;
+}
+
+.social{
+    width: 2%;
+}
+
+/* Button for change language */
+.langSwitch {
+    position: fixed;
+    z-index: 1000;
+    margin-top: 100px;
+    padding-left: 10px;
+    background-color: rgb(55, 55, 55);
+    color: white;
+    width: 50px;
+    align-content: center;
+    height: 50px;
+    font-size: 1rem;
+    border-radius: 0px 10px 10px 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.langSwitch:hover {
+    background-color: rgb(238, 0, 158);
+    cursor: pointer;
+}
+
+
+
+/* Nav config for smartphone */
+
+@media screen and (min-width:769px) {
+    .navMobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .containerNav {
+        display: none;
+    }
+
+    #Intro {
+        top: 0;
+    }
+
+    #Intro h1 {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+
+    .introContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #Intro .image {
+        width: 100%;
+
+    }
+
+    #Intro .text {
+        width: 100%;
+    }
+
+    .introContainer p {
+        padding: 15px;
+        text-align: center;
+    }
+
+    #My_Resume .flex {
+        display: block;
+    }
+
+    #My_Resume .card {
+        width: 100%;
+    }
+
+    #My_Resume .card-body {
+
+        height: auto;
+    }
+
+    #Contact form {
+        width: 100%;
+    }
+
+    footer img {
+        width: 30%;
+    }
+    .langSwitch{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    form textarea,
+    input,
+    button {
+        border-radius: 15px;
+        border: none;
+        width: 300px;
+    }
+
+}
+
+
